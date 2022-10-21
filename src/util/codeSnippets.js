@@ -150,7 +150,6 @@ export const ransomNoteSnippet = `const ransomNote = (note, magazine) => {
 }`
 
 export const primeNumbersSnippet = `const primeNumbers = number => {
-  console.log(number);
   let numbers = new Array(number + 1);
   numbers.fill(true)
   numbers[0] = numbers[1] = false
