@@ -7,6 +7,7 @@ import Fibonacci from './components/Fibonacci'
 import FizzBuzz from './components/FizzBuzz'
 import CaesarCipher from './components/CaesarCipher'
 import RansomNote from './components/RansomNote'
+import PrimeNumbers from './components/PrimeNumbers'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <TimeToType />
         <CaesarCipher />
         <RansomNote />
+        <PrimeNumbers />
         <FizzBuzz />
         <LikeButton />
       </main>

@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react"
+import { primeNumbers } from "../util/primeNumbers"
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { primeNumbersSnippet } from '../util/codeSnippets'
+
+const PrimeNumbers = () => {
+  const [limit, setLimit] = useState()
+  const [output, setOutput] = useState('')
+
+  useEffect(() => {
+    if (limit) {
+      const output = primeNumbers(parseInt(limit))
+      setOutput(output)
+    }
+  }, [limit])
+
+  return (
+    <div className="experiment">
+      <h2>Sieve of Eratosthenes</h2>
+      <p>For a given number, find all the prime numbers from zero to that number. Initial solutions might suffer from a time complexity worse than quadratic. Thankfully, Eratosthenes of Cyrene, the inventor of geography, also invented an efficient method for identifying prime numbers.</p>
+      <input type='number' placeholder="Limit" onChange={(e) => setLimit(e.target.value)} />
+      <p className="output">Output: {output}</p>
+
+      <div className="mt-4">
+        <SyntaxHighlighter
+          language='javascript'
+          style={dracula}
+          showLineNumbers={true}
+          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+        >
+          {primeNumbersSnippet}
+        </SyntaxHighlighter>
+      </div>
+    </div>
+  )
+}
+
+export default PrimeNumbers

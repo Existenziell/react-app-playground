@@ -6,6 +6,7 @@ import { timeToType } from '../util/timeToType'
 import { fizzBuzz } from "../util/fizzBuzz"
 import { caesarCipher } from "../util/caesarCipher"
 import { ransomNote } from "../util/ransomNote"
+import { primeNumbers } from "../util/primeNumbers"
 
 describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
@@ -83,5 +84,12 @@ describe("Utility function ransomNote()", () => {
   })
   it("should return false", () => {
     expect(ransomNote("sit ad est love", magazine)).toEqual(false)
+  })
+})
+
+describe("Utility function primeNumbers()", () => {
+  it("should return prime numbers up to the limit", () => {
+    expect(primeNumbers(10)).toEqual("2, 3, 5, 7")
+    expect(primeNumbers(100)).toEqual("2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97")
   })
 })
