@@ -1,6 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { ransomNote } from "../util/ransomNote"
-import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { ransomNoteSnippet } from '../util/codeSnippets'
 

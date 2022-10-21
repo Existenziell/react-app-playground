@@ -1,8 +1,8 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { invertStringSpecial } from "../util/invertStringSpecial"
 import { invertStringSpecialSnippet } from '../util/codeSnippets'
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import SyntaxHighlighter from 'react-syntax-highlighter'
 
 const InvertStringSpecial = () => {
   const [input, setInput] = useState('')

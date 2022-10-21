@@ -1,6 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { timeToType } from "../util/timeToType"
-import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { timeToTypeSnippet } from '../util/codeSnippets'
 

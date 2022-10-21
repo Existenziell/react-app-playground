@@ -1,6 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { downloadTime } from "../util/downloadTime"
-import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { downloadTimeSnippet } from '../util/codeSnippets'
 

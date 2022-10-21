@@ -1,6 +1,6 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
 import { useEffect, useState } from "react"
 import { fibonacci } from "../util/fibonacci"
-import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 import { fibonacciSnippet } from '../util/codeSnippets'
 
@@ -18,9 +18,7 @@ const Fibonacci = () => {
   return (
     <div className="experiment">
       <h2>Fibonacci sequence</h2>
-      <p>
-        Enter the desired depth.
-      </p>
+      <p>Return the fibonacci sequence up to the desired depth.</p>
       <input type='number' placeholder="depth" onChange={(e) => setDepth(e.target.value)} />
       <p className="output">Output: {output}</p>
 
