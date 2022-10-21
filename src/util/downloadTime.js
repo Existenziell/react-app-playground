@@ -5,8 +5,9 @@ export const downloadTime = (filesize, trend, observations) => {
   const remaining = filesize - downloaded
   const observedElements = trend.splice(trend.length - observations)
   const lastAverage = getSum(observedElements) / observations
-  const result = Math.ceil(remaining / lastAverage)
 
+  if (lastAverage === 0) return -1
+  const result = Math.ceil(remaining / lastAverage)
   if (isNaN(result) || result <= 0) return -1
   return result
 }
