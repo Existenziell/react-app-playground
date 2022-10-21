@@ -39,7 +39,6 @@ export const fibonacciSnippet = `const fibonacci = (depth) => {
   return sequence.join(', ')
 }`
 
-
 export const invertStringSpecialSnippet = `const invertStringSpecial = (string) => {
   const chars = string.split('')
   const lettersArray = [] // Hold all letters in an extra array
@@ -87,4 +86,15 @@ export const rotateArraySnippet = `const rotateArray = (input, steps) => {
 
   const result = changed.concat(unchanged)
   return result
+}`
+
+export const fizzBuzzSnippet = `const fizzBuzz = (input) => {
+  let output = []
+  for (let i = 1; i <= input; i++) {
+    if (i % 6 === 0) output.push("Fizz Buzz")
+    else if (i % 2 === 0) output.push("Fizz")
+    else if (i % 3 === 0) output.push("Buzz")
+    else output.push(i);
+  }
+  return output
 }`

@@ -4,6 +4,7 @@ import RotateArray from './components/RotateArray'
 import DownloadTime from './components/DownloadTime'
 import TimeToType from './components/TimeToType'
 import Fibonacci from './components/Fibonacci'
+import FizzBuzz from './components/FizzBuzz'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <DownloadTime />
         <Fibonacci />
         <TimeToType />
+        <FizzBuzz />
         <LikeButton />
       </main>
     </div>

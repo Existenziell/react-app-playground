@@ -3,6 +3,7 @@ import { rotateArray } from "../util/rotateArray"
 import { downloadTime } from '../util/downloadTime'
 import { fibonacci } from '../util/fibonacci'
 import { timeToType } from '../util/timeToType'
+import { fizzBuzz } from "../util/fizzBuzz"
 
 describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
@@ -55,5 +56,11 @@ describe('Utility function timeToType()', () => {
     expect(timeToType('8459761203', '5439')).toEqual(17)
     expect(timeToType('0123456789', '090909091')).toEqual(71)
     expect(timeToType('8459761203', '090909091')).toEqual(46)
+  })
+})
+
+describe("Utility function fizzBuzz()", () => {
+  it("Should output number", () => {
+    expect(fizzBuzz(6)).toEqual('FizzBuzz')
   })
 })
