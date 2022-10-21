@@ -8,7 +8,7 @@ const TimeToType = () => {
 
   useEffect(() => {
     if (digits && num) {
-      const output = timeToType(digits.split(''), parseInt(num))
+      const output = timeToType(digits.split(''), num.split(''))
       setOutput(output)
     }
   }, [digits, num])
@@ -21,9 +21,9 @@ const TimeToType = () => {
         index of the target digit. It takes |a - b| milliseconds to move from index a to index b.
         Calculate the number of milliseconds needed to type a number with one finger.
       </p>
-      <input type='text' placeholder="digits" value={digits} onChange={(e) => setDigits(e.target.value)} />
-      <input type='number' placeholder="Number to be typed" value={num} onChange={(e) => setNum(e.target.value)} />
-      <p>Output: {output ? `${output} minutes` : ``}</p>
+      <input type='text' placeholder="digits" onChange={(e) => setDigits(e.target.value)} />
+      <input type='number' placeholder="Number to be typed" onChange={(e) => setNum(e.target.value)} />
+      <p>Output: {output}</p>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { invertStringSpecial } from "../util/invertStringSpecial"
 import { rotateArray } from "../util/rotateArray"
 import { downloadTime } from '../util/downloadTime'
 import { fibonacci } from '../util/fibonacci'
+import { timeToType } from '../util/timeToType'
 
 describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
@@ -45,5 +46,14 @@ describe('Utility function fibonacci()', () => {
     expect(fibonacci(4)).toEqual('0, 1, 1, 2, 3')
     expect(fibonacci(10)).toEqual('0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55')
     expect(fibonacci(20)).toEqual('0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765')
+  })
+})
+
+describe('Utility function timeToType()', () => {
+  it('calculates the number of milliseconds needed to type a number with one finger', () => {
+    expect(timeToType('0123456789', '210')).toEqual(4)
+    expect(timeToType('8459761203', '5439')).toEqual(17)
+    expect(timeToType('0123456789', '090909091')).toEqual(71)
+    expect(timeToType('8459761203', '090909091')).toEqual(46)
   })
 })
