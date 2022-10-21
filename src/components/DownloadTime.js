@@ -22,9 +22,9 @@ const DownloadTime = () => {
         [B] - Trend - Array of integers listing the bytes downloaded at each minute<br />
         Z - Last Z observations to be considered
       </p>
-      <input type='number' placeholder="X: 100" value={filesize} onChange={(e) => setFilesize(e.target.value)} />
-      <input type='text' placeholder="[B]: 8,7,6,9,4,11" value={trend} onChange={(e) => setTrend(e.target.value)} />
-      <input type='number' placeholder="Z: 2" value={observations} onChange={(e) => setObservations(e.target.value)} />
+      <input type='number' placeholder="X: 100" onChange={(e) => setFilesize(e.target.value)} />
+      <input type='text' placeholder="[B]: 8,7,6,9,4,11" onChange={(e) => setTrend(e.target.value)} />
+      <input type='number' placeholder="Z: 2" onChange={(e) => setObservations(e.target.value)} />
       <p>Output: {output ? `${output} minutes` : ``}</p>
     </div>
   )
