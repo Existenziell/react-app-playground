@@ -1,54 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
 h1, h2, h2 {
-	margin-top: 0px;
-	margin-bottom: 8px;
-	font-weight: normal;
+	@apply text-2xl mb-6;
 }
 
 p {
-  line-height: 20px;
+  @apply mb-2 max-w-2xl mx-auto;
 }
 
 input {
-	padding: 8px;
+  @apply px-4 py-2 m-1 text-black;
 }
 
 /* ==========================================================================
 	App
 	========================================================================== */
 
-.App {
-  text-align: center;
-  padding-bottom: 160px;
-}
-
-.App-header h1 {
-	 padding: 20px;
-}
-
-.App-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
 .experiment {
-  background-color: #282c34;
-  color: white;
-  padding: 20px 0;
-  width: 100%;
+  @apply rounded bg-cyan-900 text-white p-8 w-full;
 }
 
 
@@ -57,17 +33,10 @@ input {
 	========================================================================== */
 
 .like-button {
-	font-size: 1rem;
-	padding: 5px 10px;
-	color:  #585858;
-}
-
-.like-button:hover {
-	cursor: pointer;
+  @apply bg-white rounded px-4 py-2 text-black hover:cursor-pointer;
 }
 
 .liked {
-	font-weight: bold;
-	color: #1565c0;
+  @apply text-[#1565c0] font-bold;
 }
 	

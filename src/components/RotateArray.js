@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { rotateArray } from "../util/rotateArray"
 
 const RotateArray = () => {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState()
   const [steps, setSteps] = useState()
   const [output, setOutput] = useState('')
 
@@ -20,10 +20,9 @@ const RotateArray = () => {
         [1, 2, 3, 4, 5] steps: 1 => [5, 1, 2, 3, 4]<br />
         [1, 2, 3, 4, 5] steps: 3 => [3, 4, 5, 1, 2]
       </p>
-      <input type='text' placeholder="CSV style numbers" value={input} onChange={(e) => setInput(e.target.value)} />
-      <input type='text' placeholder="Steps" value={steps} onChange={(e) => setSteps(e.target.value)} />
+      <input type='text' placeholder="CSV style numbers" onChange={(e) => setInput(e.target.value)} />
+      <input type='text' placeholder="Steps" onChange={(e) => setSteps(e.target.value)} />
       <p>Output: {output}</p>
-
     </div>
   )
 }

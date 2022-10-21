@@ -10,6 +10,5 @@
 // Output: 17
 
 export const timeToType = (digits, num) => {
-  console.log(digits, num);
-
+  // console.log(digits, num)
 }
