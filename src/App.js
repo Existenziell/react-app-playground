@@ -12,11 +12,11 @@ function App() {
         <h1>React Playground</h1>
       </header>
       <main className="App-main">
-        <LikeButton />
         <InvertStringSpecial />
         <RotateArray />
         <DownloadTime />
         <TimeToType />
+        <LikeButton />
       </main>
     </div>
   )

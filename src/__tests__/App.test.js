@@ -6,6 +6,8 @@ describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
     expect(invertStringSpecial("abc*zy+_&kljh")).toEqual("hjl*ky+_&zcba")
     expect(invertStringSpecial("__aa**bb))cc")).toEqual("__cc**bb))aa")
+    expect(invertStringSpecial("aaaa*bbb(cccc)eeeee6dddd")).toEqual("dddd*eee(eecc)ccbbb6aaaa")
+
   })
 })
 
