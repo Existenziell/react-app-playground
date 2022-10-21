@@ -20,11 +20,12 @@ const TimeToType = () => {
     <div className="experiment">
       <h2>TimeToType</h2>
       <p>
-        Given a string of 10 digits illustrating how the keys are positioned. To type a digit, you start from index zero to the
-        index of the target digit. It takes |a - b| milliseconds to move from index a to index b.
+        A digit-only keyboard contains all 10 digits from 0 to 9. They all exist in one line.
+        To type a digit, you start from index zero to the index of the target digit.
+        It takes |a - b| milliseconds to move from index a to index b.
         Calculate the number of milliseconds needed to type a number with one finger.
       </p>
-      <input type='text' placeholder="digits" onChange={(e) => setDigits(e.target.value)} />
+      <input type='text' placeholder="Digits 0-9" onChange={(e) => setDigits(e.target.value)} />
       <input type='number' placeholder="Number to be typed" onChange={(e) => setNum(e.target.value)} />
       <p className="output">Output: {output}</p>
 

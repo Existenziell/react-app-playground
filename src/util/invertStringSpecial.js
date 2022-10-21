@@ -1,22 +1,22 @@
 export const invertStringSpecial = (string) => {
-  const letters = string.split('')
+  const chars = string.split('')
   const lettersArray = [] // Hold all letters in an extra array
 
-  for (let i = 0; i < letters.length; i++) {
-    const isLetter = /^[a-zA-Z]+$/.test(letters[i])
+  for (let i = 0; i < chars.length; i++) {
+    const isLetter = /^[a-zA-Z]+$/.test(chars[i])
     if (isLetter) {
-      lettersArray.push(letters[i])
-      letters[i] = null // Replace all letters with null
+      lettersArray.push(chars[i])
+      // Replace all letters with null to be replaced later
+      chars[i] = null
     }
   }
 
-  // Loop again over letters popping the last element of lettersArray into letters
-  for (let i = 0; i < letters.length; i++) {
-    if (letters[i] === null) {
-      letters[i] = lettersArray.pop()
+  for (let i = 0; i < chars.length; i++) {
+    if (chars[i] === null) {
+      chars[i] = lettersArray.pop()
     }
   }
 
-  const result = letters.join('')
+  const result = chars.join('')
   return result
 }
