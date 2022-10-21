@@ -5,6 +5,8 @@ import DownloadTime from './components/DownloadTime'
 import TimeToType from './components/TimeToType'
 import Fibonacci from './components/Fibonacci'
 import FizzBuzz from './components/FizzBuzz'
+import CaesarCipher from './components/CaesarCipher'
+import RansomNote from './components/RansomNote'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <DownloadTime />
         <Fibonacci />
         <TimeToType />
+        <CaesarCipher />
+        <RansomNote />
         <FizzBuzz />
         <LikeButton />
       </main>

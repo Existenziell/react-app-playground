@@ -98,3 +98,51 @@ export const fizzBuzzSnippet = `const fizzBuzz = (input) => {
   }
   return output
 }`
+
+export const caesarCipherSnippet = `const caesarCipher = (phrase, number) => {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+  const input = phrase.toLowerCase()
+  let output = ""
+
+  for (let i = 0 i < input.length i++) {
+    const letter = input[i]
+
+    if (alphabet.indexOf(letter) === -1) {
+      output += letter
+      continue
+    }
+
+    let index = alphabet.indexOf(letter) + number % 26
+    if (index > 25) index -= 26
+    if (index < 0) index += 26
+
+    output +=
+      phrase[i] === phrase[i].toUpperCase()
+        ? alphabet[index].toUpperCase()
+        : alphabet[index]
+  }
+
+  return output
+}`
+
+export const ransomNoteSnippet = `const ransomNote = (note, magazine) => {
+  const magazineWords = magazine.split(" ")
+  const magazineHash = {}
+
+  magazineWords.forEach(word => {
+    if (!magazineHash[word]) magazineHash[word] = 0
+    magazineHash[word]++
+  })
+
+  const noteWords = note.split(" ")
+  let possible = true
+
+  noteWords.forEach(word => {
+    if (magazineHash[word]) {
+      magazineHash[word]--
+      if (magazineHash[word] < 0) possible = false
+    } else possible = false
+  })
+
+  return possible
+}`

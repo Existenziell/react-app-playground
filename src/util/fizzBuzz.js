@@ -6,6 +6,5 @@ export const fizzBuzz = (input) => {
     else if (i % 3 === 0) output.push("Buzz")
     else output.push(i);
   }
-  console.log(output);
-  return output
+  return output.join('')
 }

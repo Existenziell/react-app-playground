@@ -4,6 +4,8 @@ import { downloadTime } from '../util/downloadTime'
 import { fibonacci } from '../util/fibonacci'
 import { timeToType } from '../util/timeToType'
 import { fizzBuzz } from "../util/fizzBuzz"
+import { caesarCipher } from "../util/caesarCipher"
+import { ransomNote } from "../util/ransomNote"
 
 describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
@@ -60,7 +62,26 @@ describe('Utility function timeToType()', () => {
 })
 
 describe("Utility function fizzBuzz()", () => {
-  it("Should output number", () => {
-    expect(fizzBuzz(6)).toEqual('FizzBuzz')
+  it("Should output a string with Fizz and Buzz", () => {
+    expect(fizzBuzz(6)).toEqual(`1FizzBuzzFizz5Fizz Buzz`)
+    expect(fizzBuzz(18)).toEqual(`1FizzBuzzFizz5Fizz Buzz7FizzBuzzFizz11Fizz Buzz13FizzBuzzFizz17Fizz Buzz`)
+  })
+})
+
+describe("Utility function caesarCipher()", () => {
+  it("Should shift to the string by the given number.", () => {
+    expect(caesarCipher("I love JavaScript!", 100)).toEqual("E hkra FwrwOynelp!")
+    expect(caesarCipher("I love JavaScript!", -100)).toEqual("M pszi NezeWgvmtx!")
+  })
+})
+
+const magazine = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+
+describe("Utility function ransomNote()", () => {
+  it("should return true", () => {
+    expect(ransomNote("sit ad est sint", magazine)).toEqual(true)
+  })
+  it("should return false", () => {
+    expect(ransomNote("sit ad est love", magazine)).toEqual(false)
   })
 })
