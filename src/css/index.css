@@ -25,6 +25,7 @@ input {
 
 .App {
   text-align: center;
+  padding-bottom: 160px;
 }
 
 .App-header h1 {

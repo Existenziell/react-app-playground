@@ -1,6 +1,14 @@
 export const rotateArray = (input, steps) => {
+  if (steps === 0) return input
+
   // Deal with overflow
-  if (steps > input.length) steps -= input.length
+  if (steps > input.length) {
+    if (steps % input.length === 0) {
+      steps = input.length
+    } else {
+      steps = Math.floor(steps % input.length)
+    }
+  }
 
   let changed = []
   const unchanged = input.splice(0, input.length - steps)

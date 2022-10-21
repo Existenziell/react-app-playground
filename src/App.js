@@ -2,6 +2,8 @@ import './css/index.css'
 import LikeButton from './components/LikeBtn'
 import InvertStringSpecial from './components/InvertStringSpecial'
 import RotateArray from './components/RotateArray'
+import DownloadTime from './components/DownloadTime'
+import TimeToType from './components/TimeToType'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <LikeButton />
         <InvertStringSpecial />
         <RotateArray />
+        <DownloadTime />
+        <TimeToType />
       </main>
     </div>
   )

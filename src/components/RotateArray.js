@@ -16,8 +16,8 @@ const RotateArray = () => {
   return (
     <div className="experiment">
       <h2>Rotate Array k steps</h2>
-      <input type='text' placeholder="Enter Array" value={input} onChange={(e) => setInput(e.target.value)} />
-      <input type='text' placeholder="Enter Steps" value={steps} onChange={(e) => setSteps(e.target.value)} />
+      <input type='text' placeholder="CSV style numbers" value={input} onChange={(e) => setInput(e.target.value)} />
+      <input type='text' placeholder="Steps" value={steps} onChange={(e) => setSteps(e.target.value)} />
       <p>Output: {output}</p>
 
     </div>
