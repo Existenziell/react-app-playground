@@ -12,11 +12,11 @@ h1, h2, h2 {
 }
 
 p {
-  @apply mb-2 max-w-2xl mx-auto;
+  @apply mb-4;
 }
 
 input {
-  @apply px-4 py-2 m-1 text-black;
+  @apply px-4 py-2 mr-1 text-black;
 }
 
 /* ==========================================================================
@@ -24,9 +24,12 @@ input {
 	========================================================================== */
 
 .experiment {
-  @apply rounded bg-cyan-900 text-white p-8 w-full;
+  @apply rounded bg-cyan-900 text-white p-8 w-full md:max-w-4xl md:mx-auto;
 }
 
+.output {
+  @apply mt-2 mb-0 bg-gray-100 text-black px-4 py-2;
+}
 
 /* ==========================================================================
 	likeButton

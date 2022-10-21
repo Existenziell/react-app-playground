@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import { downloadTime } from "../util/downloadTime"
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { downloadTimeSnippet } from '../util/codeSnippets'
 
 const DownloadTime = () => {
   const [filesize, setFilesize] = useState()
@@ -25,7 +28,18 @@ const DownloadTime = () => {
       <input type='number' placeholder="X: 100" onChange={(e) => setFilesize(e.target.value)} />
       <input type='text' placeholder="[B]: 8,7,6,9,4,11" onChange={(e) => setTrend(e.target.value)} />
       <input type='number' placeholder="Z: 2" onChange={(e) => setObservations(e.target.value)} />
-      <p>Output: {output ? `${output} minutes` : ``}</p>
+      <p className="output">Output: {output ? `${output} minutes` : ``}</p>
+
+      <div className="mt-4">
+        <SyntaxHighlighter
+          language='javascript'
+          style={dracula}
+          showLineNumbers={true}
+          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+        >
+          {downloadTimeSnippet}
+        </SyntaxHighlighter>
+      </div>
     </div>
   )
 }

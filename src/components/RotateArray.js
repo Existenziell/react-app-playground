@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import { rotateArray } from "../util/rotateArray"
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { rotateArraySnippet } from '../util/codeSnippets'
 
 const RotateArray = () => {
   const [input, setInput] = useState()
@@ -22,7 +25,18 @@ const RotateArray = () => {
       </p>
       <input type='text' placeholder="CSV style numbers" onChange={(e) => setInput(e.target.value)} />
       <input type='text' placeholder="Steps" onChange={(e) => setSteps(e.target.value)} />
-      <p>Output: {output}</p>
+      <p className="output">Output: {output}</p>
+
+      <div className="mt-4">
+        <SyntaxHighlighter
+          language='javascript'
+          style={dracula}
+          showLineNumbers={true}
+          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+        >
+          {rotateArraySnippet}
+        </SyntaxHighlighter>
+      </div>
     </div>
   )
 }

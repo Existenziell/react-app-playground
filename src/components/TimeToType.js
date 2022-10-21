@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import { timeToType } from "../util/timeToType"
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { timeToTypeSnippet } from '../util/codeSnippets'
 
 const TimeToType = () => {
   const [digits, setDigits] = useState()
@@ -23,7 +26,18 @@ const TimeToType = () => {
       </p>
       <input type='text' placeholder="digits" onChange={(e) => setDigits(e.target.value)} />
       <input type='number' placeholder="Number to be typed" onChange={(e) => setNum(e.target.value)} />
-      <p>Output: {output}</p>
+      <p className="output">Output: {output}</p>
+
+      <div className="mt-4">
+        <SyntaxHighlighter
+          language='javascript'
+          style={dracula}
+          showLineNumbers={true}
+          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+        >
+          {timeToTypeSnippet}
+        </SyntaxHighlighter>
+      </div>
     </div>
   )
 }
