@@ -8,6 +8,7 @@ const RotateArray = () => {
   const [input, setInput] = useState()
   const [steps, setSteps] = useState()
   const [output, setOutput] = useState('')
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     if (steps) {
@@ -27,16 +28,22 @@ const RotateArray = () => {
       <input type='text' placeholder="Steps" onChange={(e) => setSteps(e.target.value)} />
       <p className="output">Output: {output}</p>
 
-      <div className="mt-4">
-        <SyntaxHighlighter
-          language='javascript'
-          style={dracula}
-          showLineNumbers={true}
-          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
-        >
-          {rotateArraySnippet}
-        </SyntaxHighlighter>
-      </div>
+      <button onClick={() => setVisible(!visible)} className='mt-2 button button-sm'>
+        {visible ? `Hide Code` : `Unveil code`}
+      </button>
+
+      {visible &&
+        <div className="mt-2">
+          <SyntaxHighlighter
+            language='javascript'
+            style={dracula}
+            showLineNumbers={true}
+            customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+          >
+            {rotateArraySnippet}
+          </SyntaxHighlighter>
+        </div>
+      }
     </div>
   )
 }

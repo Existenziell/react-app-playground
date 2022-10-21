@@ -13,12 +13,6 @@ email: bauer.christof@gmail.com
 
 @import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 
-:root {
-  --color-brand: #a6d1c9;
-  --color-brand-dark: #282b29;
-  --color-cta: #D6A269;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -60,3 +54,19 @@ input {
   @apply text-[#1565c0] font-bold;
 }
 	
+
+/* ==========================================================================
+	Forms 
+	========================================================================== */
+
+.button {
+  @apply px-8 py-4 bg-cyan-900 text-white rounded-sm shadow-lg hover:shadow-none hover:cursor-pointer transition-all;
+}
+
+.button-sm {
+  @apply bg-white text-gray-800 px-4 py-2 text-sm;
+}
+
+.button:disabled, .button-sm:disabled {
+  @apply cursor-not-allowed hover:shadow-lg;
+}

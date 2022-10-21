@@ -8,11 +8,6 @@ module.exports = {
       fontFamily: {
         sans: ['Inconsolata'],
       },
-      colors: {
-        'brand': '#a6d1c9',
-        'brand-dark': '#282b29',
-        'cta': '#D6A269',
-      },
     },
   },
   plugins: [],

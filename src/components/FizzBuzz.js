@@ -7,6 +7,7 @@ import { fizzBuzzSnippet } from '../util/codeSnippets'
 const FizzBuzz = () => {
   const [input, setInput] = useState()
   const [output, setOutput] = useState('')
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     if (input) {
@@ -24,16 +25,22 @@ const FizzBuzz = () => {
       <input type='number' placeholder="Number" onChange={(e) => setInput(e.target.value)} />
       <p className="output">Output: {output}</p>
 
-      <div className="mt-4">
-        <SyntaxHighlighter
-          language='javascript'
-          style={dracula}
-          showLineNumbers={true}
-          customStyle={{ fontSize: '14px', lineHeight: '20px' }}
-        >
-          {fizzBuzzSnippet}
-        </SyntaxHighlighter>
-      </div>
+      <button onClick={() => setVisible(!visible)} className='mt-2 button button-sm'>
+        {visible ? `Hide Code` : `Unveil code`}
+      </button>
+
+      {visible &&
+        <div className="mt-4">
+          <SyntaxHighlighter
+            language='javascript'
+            style={dracula}
+            showLineNumbers={true}
+            customStyle={{ fontSize: '14px', lineHeight: '20px' }}
+          >
+            {fizzBuzzSnippet}
+          </SyntaxHighlighter>
+        </div>
+      }
     </div>
   )
 }
