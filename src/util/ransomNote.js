@@ -1,5 +1,4 @@
 export const ransomNote = (note, magazine) => {
-  console.log(note, magazine);
   const magazineWords = magazine.split(" ")
   const magazineHash = {}
 

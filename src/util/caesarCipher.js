@@ -1,6 +1,4 @@
 export const caesarCipher = (phrase, number) => {
-
-  console.log(phrase, number);
   const alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
   const input = phrase.toLowerCase()
   let output = ""
