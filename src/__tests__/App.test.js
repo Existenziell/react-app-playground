@@ -1,13 +1,13 @@
 import { invertStringSpecial } from "../util/invertStringSpecial"
 import { rotateArray } from "../util/rotateArray"
 import { downloadTime } from '../util/downloadTime'
+import { fibonacci } from '../util/fibonacci'
 
 describe('Utility function invertStringSpecial()', () => {
   it('reverts strings, but only letters', () => {
     expect(invertStringSpecial("abc*zy+_&kljh")).toEqual("hjl*ky+_&zcba")
     expect(invertStringSpecial("__aa**bb))cc")).toEqual("__cc**bb))aa")
     expect(invertStringSpecial("aaaa*bbb(cccc)eeeee6dddd")).toEqual("dddd*eee(eecc)ccbbb6aaaa")
-
   })
 })
 
@@ -33,5 +33,17 @@ describe('Utility function downloadTime()', () => {
     expect(downloadTime(0, [2, 3], 2)).toEqual(-1)
     expect(downloadTime(10, [2, 3], 0)).toEqual(-1)
     expect(downloadTime(10, [], 2)).toEqual(-1)
+  })
+})
+
+describe('Utility function fibonacci()', () => {
+  it('returns the fibonacci sequence for the desired depth', () => {
+    expect(fibonacci(0)).toEqual('0')
+    expect(fibonacci(1)).toEqual('0, 1')
+    expect(fibonacci(2)).toEqual('0, 1, 1')
+    expect(fibonacci(3)).toEqual('0, 1, 1, 2')
+    expect(fibonacci(4)).toEqual('0, 1, 1, 2, 3')
+    expect(fibonacci(10)).toEqual('0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55')
+    expect(fibonacci(20)).toEqual('0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765')
   })
 })
