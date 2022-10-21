@@ -11,7 +11,9 @@ export const timeToTypeSnippet = `const timeToType = (digits, num) => {
 }`
 
 export const downloadTimeSnippet = `const downloadTime = (filesize, trend, observations) => {
-  const getSum = (array) => (array.reduce((partialSum, array) => partialSum + parseInt(array), 0))
+  const getSum = (array) => (array.reduce((partialSum, array) => 
+    partialSum + parseInt(array), 0)
+  )
 
   const downloaded = getSum(trend)
   const remaining = filesize - downloaded
