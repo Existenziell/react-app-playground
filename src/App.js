@@ -16,7 +16,7 @@ function App() {
         <h1 className='text-4xl mt-6 mb-1'>React Playground</h1>
         <p className='mb-6'>Algorithmic fun...</p>
       </header>
-      <main className="flex flex-col gap-6 w-full">
+      <main className="flex flex-col gap-10 w-full">
         <RotateArray />
         <InvertStringSpecial />
         <DownloadTime />
